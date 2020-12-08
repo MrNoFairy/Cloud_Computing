@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Stock Viewer</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<link rel="stylesheet" href="w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=El+Messiri&display=swap">
+<link rel="stylesheet" href="index.css">
+</head>
+<body class="font-ElMessiri">
+	<img id="Banner" src="Ressources/Pictures/NTBHeader.jpg">
+	<div>
+		<button onclick="accordeonManager('Accordeon1')" class="w3-button w3-block w3-grey w3-border w3-border-dark-grey w3-left-align">Projekt Cloud Computing</button>
+			<div id="Accordeon1" class="w3-container w3-show w3-animate-zoom">
+				<div w3-include-html="info.html"></div>
+			</div>
+		<button onclick="accordeonManager('Accordeon2')" class="w3-button w3-block w3-grey w3-border w3-border-dark-grey w3-left-align">Map</button>
+			<div id="Accordeon2" class="w3-hide w3-animate-zoom">
+				<div id="map"></div>
+			</div>
+		<button onclick="accordeonManager('Accordeon3')"
+			class="w3-button w3-block w3-grey w3-border w3-border-dark-grey w3-left-align">Chart</button>
+			<div id="Accordeon3" class="w3-hide w3-animate-zoom">
+				<svg id="chart" viewBox="0 0 960 280"></svg>
+			</div>
+	</div>
+	<script src="https://maps.googleapis.com/maps/api/js?key= AIzaSyBiTq9Evakl-JfCxLPcyaKzEy5eC3TZz6c"></script>
+	<script src="d3.v5.min.js"></script>
+	<script src="index.js"></script>
+</body>
+</html>
